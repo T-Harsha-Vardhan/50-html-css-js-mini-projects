@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-height: 90vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  margin: auto 24px;
+}
+
+.panel {
+  flex: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: flex 0.7s ease-in;
+  position: relative;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  transition: opacity 0.5s ease-in;
+}
+
+.panel.active {
+  flex: 10;
+}
+
+.panel h3 {
+  opacity: 0;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
