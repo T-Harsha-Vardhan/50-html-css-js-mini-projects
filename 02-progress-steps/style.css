@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.progress-steps-wrapper {
+  display: flex;
+  gap: 64px;
+  position: relative;
+}
+
+.progress-steps-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #383838;
+  z-index: -1;
+}
+
+.progress {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  background-color: #3498db;
+  z-index: -1;
+  transition: width 0.5s ease-in-out;
+}
+
+.circle {
+  background-color: #f1f1f1;
+  color: #777;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #383838;
+  transition: 0.4s ease;
+}
+
+.active {
+  border-color: #3498db;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.disable {
+  background-color: #383838;
+  color: white;
+  cursor: not-allowed;
+}
+
+.enable {
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
